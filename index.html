@@ -5,16 +5,16 @@
 	<meta charset="utf-8">
 </head>
 <body onload="mainFunc();">
-    <p>Физическое моделирование</p>
-    Количество частиц в системе: <input type="number" id="number_input" min = 10 max = 1000 value = 50 style = "width: 50px"> <br>
-    Масса M2 = M1 *  <input type="number" id="mass_input" min = 1 max = 20 value = 10 style = "width: 50px">
-
-    <input type="button" id = "New" value = "Посчитать"/><br>
+    <h3>Физическое моделирование</h3>
 	  <canvas id="canva" width="900" height="100" style="border: 1px solid #000000"></canvas><br>
+		Количество частиц в системе: <input type="number" id="number_input" min = 10 max = 1000 value = 50 style = "width: 50px">
+    Масса M2 = M1 *  <input type="number" id="mass_input" min = 1 max = 20 value = 10 style = "width: 50px">
+		<input type="button" id = "New" value = "Посчитать"/><br>
 
-    <p>Кинетическая энергия частиц массы M1/M2/всей системы</p>
+    <h3>Кинетическая энергия частиц массы M1/M2/всей системы</h3>
     <canvas id="canva2En" width="900" height="200" style="border: 1px solid #000000"></canvas><br>
-    <p>Потенциальная энергия частиц массы M1/M2/всей системы</p>
+
+    <h3>Потенциальная энергия частиц массы M1/M2/всей системы</h3>
     <canvas id="canva3En" width="900" height="200" style="border: 1px solid #000000"></canvas><br>
 
 		<script src="Script.js"></script>

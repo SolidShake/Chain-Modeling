@@ -104,13 +104,10 @@ function mainFunc() {
 
     var maxKinEn = 0;
     var maxPotEn = 0;
-    var flag = 0;
 
     function launch() {
 
         physics();
-        maxPotEn = param[1].pot + param[1].kin ;
-        console.log(maxPotEn);
         draw();
         draw2();
         draw3();
@@ -167,6 +164,8 @@ function mainFunc() {
             ctx3.clearRect(0, 0, width3, height3);
         }
 
+        maxPotEn = param[1].pot + param[1].kin;
+
         param[1].pot = currPotEn;
         param[1].kin = currKinEn;
 
@@ -199,16 +198,6 @@ function mainFunc() {
     function draw2() {
         //очистка легенды
         ctx2.clearRect(0, 0, width2, 30);
-
-        // ctx2.lineWidth="3";
-        // ctx2.strokeStyle="#DDDDD4";
-        // ctx2.beginPath();
-
-        //эн всей системы
-        //ctx2.moveTo((T - dt) * 200 , height2  - (param[0].kin + param[0].pot) / koeff1 / maxPotEn * height2 - 25);
-        //ctx2.lineTo(T * 200, height2 - (param[1].kin + param[1].pot)/ koeff1 / maxPotEn * height2 - 25);
-        //ctx2.stroke();
-        //
 
         ctx2.lineWidth="3";
         ctx2.strokeStyle="#7FFFD4";
@@ -255,9 +244,7 @@ function mainFunc() {
         ctx2.moveTo(0, height2);
         ctx2.lineTo(width2, height2);
         ctx2.lineTo(width2 - 5, height2 - 10 + 5);
-
         ctx2.stroke();
-
         ctx2.font = "12px Arial";
         ctx2.fillText("t", width2 - 15, height2 - 5);
     }
@@ -312,7 +299,6 @@ function mainFunc() {
         ctx3.lineTo(width3, height3);
         ctx3.lineTo(width3 - 5, height3 - 5);
         ctx3.stroke();
-
         ctx3.font = "12px Arial";
         ctx3.fillText("t", width3 - 15, height3 - 5);
     }
